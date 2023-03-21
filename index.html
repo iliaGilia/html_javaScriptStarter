@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+</head>
+
+<body id="bHt">    
+            <p>type a number between 2-4 to change color</p>
+			<button onclick=numCheck(pIn)> Generate</button>
+            <input id="pIn">
+		
+
+    <script>
+
+        function numCheck(valueNum)
+        {
+            const bBack = document.getElementById('bHt') //  יצרתי משתנה שיזהה את הבודי כדי לשנות את הרקע שלו
+            if(valueNum.value<=10){
+                console.log(valueNum.value);
+            } // בדיקה האם המספר קטן מ10 או שווה ומחזיר את המספר
+            else if(valueNum.value>=11 && valueNum.value<=20)
+            { // בדיקה האם המספר בין 11 ל20 אם כן מחזיר את המספר פעמיים
+                console.log(valueNum.value);
+                console.log(valueNum.value);
+            }
+            else if(valueNum.value>=21 && valueNum.value<=30){ //בדיקה האם המספר בין 21 ל30 מחזיר את השם שלי
+                console.log("ilia emanuel");
+            }
+            else if(valueNum.value>=31 && valueNum.value<=40){ // בדיקה בין 31 ל40 מחזיר את המספר כפול 4
+                console.log(valueNum.value*4);
+            }
+            else if(valueNum.value>=41 && valueNum.value<=50)
+            { // בדיקה בין 41 ל50 תחזיר את המספר ועוד 200
+                console.log(parseInt(valueNum.value)+200);
+            }
+
+            if(valueNum.value == 2){ // אם המספר שנשלח הוא 2 הרקע יהפוך לאדום
+                bBack.style.backgroundColor = 'red';
+            }
+            else if(valueNum.value == 3){// אם המספר שנשלח הוא 2 הרקע יהפוך לירוק
+                bBack.style.backgroundColor = 'green';
+            }
+            else if(valueNum.value == 4){// אם המספר שנשלח הוא 2 הרקע יהפוך לכחול
+                bBack.style.backgroundColor = 'blue';
+            }
+        }
+    
+        
+    </script>
+</body>
+</html>

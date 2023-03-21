@@ -9,7 +9,7 @@
 </head>
 
 <body id="bHt">    
-            <p>type a number between 2-4 to change color</p>
+            <p>Type a number between 2-4 to change color</p>
 			<button onclick=numCheck(pIn)> Generate</button>
             <input id="pIn">
 		
@@ -18,7 +18,8 @@
 
         function numCheck(valueNum)
         {
-            const bBack = document.getElementById('bHt') //  יצרתי משתנה שיזהה את הבודי כדי לשנות את הרקע שלו
+            const bBack = document.getElementById('bHt') //   יצרתי משתנה שאי אפשר לשנות את הערך שלו והגדרתי אותו כגוף
+            const iPut = document.getElementById('pIn')
             if(valueNum.value<=10){
                 console.log(valueNum.value);
             } // בדיקה האם המספר קטן מ10 או שווה ומחזיר את המספר
@@ -41,11 +42,16 @@
             if(valueNum.value == 2){ // אם המספר שנשלח הוא 2 הרקע יהפוך לאדום
                 bBack.style.backgroundColor = 'red';
             }
-            else if(valueNum.value == 3){// אם המספר שנשלח הוא 2 הרקע יהפוך לירוק
+            else if(valueNum.value == 3){// אם המספר שנשלח הוא 3 הרקע יהפוך לירוק
                 bBack.style.backgroundColor = 'green';
             }
-            else if(valueNum.value == 4){// אם המספר שנשלח הוא 2 הרקע יהפוך לכחול
+            else if(valueNum.value == 4){// אם המספר שנשלח הוא4 הרקע יהפוך לכחול
                 bBack.style.backgroundColor = 'blue';
+            }
+            
+            if(valueNum.value<=1 || valueNum.value>=5){
+                valueNum.value = "I Said Between 2-4"
+
             }
         }
     
